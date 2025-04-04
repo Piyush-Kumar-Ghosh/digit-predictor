@@ -22,15 +22,12 @@ canvas_result = st_canvas(
 )
 
 if canvas_result.image_data is not None:
-    img = canvas_result.image_data[:, :, 0]  # Get 1 channel (grayscale)
+    img = canvas_result.image_data[:, :, 0]
     img = Image.fromarray(img).resize((28, 28)).convert("L")
     img = np.array(img)
     img = img.reshape(1, 28, 28, 1) / 255.0
 
-    # Check if the drawing is basically blank
-    if np.sum(img) < 10:
-        st.warning("🖼️ Please draw a digit before predicting.")
-    else:
-        pred = model.predict(img)
-        predicted_digit = np.argmax(pred)
-        st.subheader(f"Predicted Digit: {predicted_digit}")
+    pred = model.predict(img)
+    predicted_digit = np.argmax(pred)
+
+    st.subheader(f"Predicted Digit: {predicted_digit}")
