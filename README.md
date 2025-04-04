@@ -31,7 +31,7 @@ This is a simple and interactive web app that recognizes handwritten digits usin
 ## 🛠️ How to Run Locally
 
 ```bash
-git clone https://github.com/yourusername/mnist-streamlit-app.git
-cd mnist-streamlit-app
+git clone https://github.com/Piyush-Kumar-Ghosh/digit-predictor.git
+cd digit-predictor
 pip install -r requirements.txt
 streamlit run app.py
