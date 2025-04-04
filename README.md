@@ -24,7 +24,7 @@ This is a simple and interactive web app that recognizes handwritten digits usin
 - Trained on the MNIST dataset
 - 2 Convolutional layers + Dense layers
 - Accuracy: ~98% on test set
-- Saved as: `mnist_digit_model.h5`
+- Saved as: `mnist_digit_model.keras`
 
 ---
 
